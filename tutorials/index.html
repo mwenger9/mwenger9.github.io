@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../vision/">
+        <link rel="prev" href="../nlp/">
       
       
       
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scenario-structure" class="md-skip">
+        <a href="#installation" class="md-skip">
           Skip to content
         </a>
       
@@ -231,6 +231,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../nlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NLP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -290,6 +310,11 @@
                   
 
 
+<h1 id="installation">Installation</h1>
+<p>To install the assistant, you must clone the git project (https://gitlab.insa-rennes.fr/Amory.Tharreau/ProjectIA) and install all the dependencies using the command:</p>
+<pre><code>pip install -r requirements.txt
+</code></pre>
+<p>To start the program, you must launch the <strong>kernel.py</strong> file which will start the main loop and wait for user input to execute a scenario.</p>
 <h1 id="scenario-structure">Scenario structure</h1>
 <pre><code>keyword = [&quot;word1&quot;, &quot;word2&quot;]
 
@@ -300,6 +325,10 @@ def start(context):
 <blockquote>
 <p>The kernel will launch the function start() of the scenario depending of the keywords (here word1, word2...)</p>
 </blockquote>
+<h1 id="add-a-new-context">Add a new context</h1>
+<p>To be able to add different contexts for the <strong>listen_word</strong> function, you must place a context file (audio recorded with the sentence to add) in .wav format in the <strong>Resources &gt; wordContext</strong> folder and clearly specify the argument when using the function. which is the name of the .wav file. For example :</p>
+<pre><code>listen_word(“moncontexte.wav”)
+</code></pre>
 
 
 
